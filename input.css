@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply text-white bg-[#0067b8] hover:bg-[#1b679c] px-3 py-2 font-semibold focus:outline-dotted focus:outline-[3px] focus:outline-white focus:outline-offset-[-6px] cursor-pointer text-left;
+  }
+
+  .pause svg {
+    @apply transition ease-in-out duration-300;
+  }
+
+  .pause svg path {
+    @apply fill-current text-white; /* Apply current color to fill */
+  }
+
+  .pause svg line {
+    @apply stroke-current text-black; /* Apply current color to stroke */
+  }
+
+  .pause:hover svg path {
+    @apply text-black; /* Change path color on hover */
+  }
+
+  .pause:hover svg line {
+    @apply text-white; /* Change line color on hover */
+  }
+
+  .arrow-l svg {
+    @apply transition-transform duration-300; /* Smooth transition */
+  }
+
+  .arrow-l:hover svg {
+    @apply -translate-x-2; /* Move left on hover */
+  }
+
+  .arrow-r svg {
+    @apply transition-transform duration-300; /* Smooth transition */
+  }
+
+  .arrow-r:hover svg {
+    @apply translate-x-2; /* Move left on hover */
+  }
+
+}
+
+
