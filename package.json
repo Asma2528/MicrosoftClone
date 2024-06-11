@@ -1,11 +1,13 @@
 {
-  
-  "name": "facebookclone",
+  "name": "microsftclone",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start":"vite",
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
