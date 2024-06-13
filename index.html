@@ -11,17 +11,7 @@
 
 <body class="bg-[#fdfdfd]">
   <div id="nav" class="navbar flex justify-between items-center h-11">
-    <div class="flex justify-center item-center h-12 md:hidden">
-      <div id="navItems" class="w-full bg-gray-300 flex-col text-xs ml-0 mt-12 hidden">
-        <div class="nav-items p-2 border-b-[1.5px]">Microsoft 365</div>
-        <div class="nav-items p-2 border-b-[1.5px]">Teams</div>
-        <div class="nav-items p-2 border-b-[1.5px]">Copilot</div>
-        <div class="nav-items p-2 border-b-[1.5px]">Windows</div>
-        <div class="nav-items p-2 border-b-[1.5px]">More</div>
-        <div class="nav-items p-2 border-b-[1.5px]">Surface</div>
-        <div class="nav-items p-2 border-b-[1.5px]">Xbox</div>
-        <div class="nav-items p-2 border-b-[1.5px]">Support</div>
-      </div>
+    <div class="flex justify-center items-center h-12 md:hidden">
       <div id="menu" class="hamburger inline-block p-4 cursor-pointer">
         <div class="line my-1 bg-black h-[0.075rem] w-[1.15rem]"></div>
         <div class="line my-1 bg-black h-[0.075rem] w-[1.15rem]"></div>
@@ -31,8 +21,8 @@
         <svg fill="#000000" height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" stroke="#000000"
           stroke-width="0.0034">
-          <g id="SVGRepo_bgCarrier" stroke-width="0" />
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
             <polygon
               points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 " />
@@ -78,10 +68,11 @@
         </span>
       </div>
     </div>
-    <div class="flex md:justify-center md:items-center space-x-4">
-      <div class="hidden md:flex hover:underline hover:decoration-2 underline-offset-8 text-xs md:space-x-1">
-        <p>All Microsoft</p>
-        <svg class="mt-1" width="10px" height="10px" viewBox="0 0 1024 1024" class="icon" version="1.1"
+    <div class="flex items-center space-x-4">
+      <div id="allMicrosoftDropdown"
+        class="dropdown relative hidden md:flex items-center text-xs cursor-pointer focus:border-dashed pl-3 py-3 pr-1 ">
+        <p class="">All Microsoft</p>
+        <svg class="ml-1" width="10px" height="10px" viewBox="0 0 1024 1024" class="icon" version="1.1"
           xmlns="http://www.w3.org/2000/svg" fill="#000000">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -90,6 +81,7 @@
           </g>
         </svg>
       </div>
+      <!--  -->
       <div class="searchBar hidden md:flex">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="58" viewBox="0 0 32 32">
           <path
@@ -118,53 +110,206 @@
       <div></div>
     </div>
   </div>
+  <div id="dropdownItems" class="absolute  bg-gray-100 border border-b-0 w-max text-xs hidden">
+    <div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-9 m-6">
+      <div class="flex flex-col cursor-pointer">
+        <p class="font-semibold pb-5">Software</p>
+        <p class="hover:underline pb-5">Windows Apps</p>
+        <p class="hover:underline pb-5">AI</p>
+        <p class="hover:underline pb-5">OneDrive</p>
+        <p class="hover:underline pb-5">Outlook</p>
+        <p class="hover:underline pb-5">Skype</p>
+        <p class="hover:underline pb-5">OneNote</p>
+        <p class="hover:underline pb-5">Microsoft Teams</p>
+      </div>
+      <div class="flex flex-col cursor-pointer">
+        <p class="font-semibold pb-5">PCs & Devices</p>
+        <p class="hover:underline pb-5">Shop Xbox</p>
+        <p class="hover:underline pb-5">Accessories</p>
+      </div>
+      <div class="flex flex-col cursor-pointer">
+        <p class="font-semibold pb-5">Entertainment</p>
+        <p class="hover:underline pb-5">Xbox Game Pass Ultimate</p>
+        <p class="hover:underline pb-5">Xbox Live Gold</p>
+        <p class="hover:underline pb-5">Xbox games</p>
+        <p class="hover:underline pb-5">PC games</p>
+        <p class="hover:underline pb-5">Windows digital games</p>
+      </div>
+      <div class="flex flex-col cursor-pointer">
+        <p class="font-semibold pb-5">Business</p>
+        <p class="hover:underline pb-5">Microsoft Cloud</p>
+        <p class="hover:underline pb-5">Microsoft Security</p>
+        <p class="hover:underline pb-5">Azure</p>
+        <p class="hover:underline pb-5">Dynamics 365</p>
+        <p class="hover:underline pb-5">Microsoft 365 for business</p>
+        <p class="hover:underline pb-5">Microsoft Power Platform</p>
+        <p class="hover:underline pb-5">Windows 365</p>
+      </div>
+      <div class="flex flex-col cursor-pointer">
+        <p class="font-semibold pb-5">Developer & IT</p>
+        <p class="hover:underline pb-5">Developer Center</p>
+        <p class="hover:underline pb-5">Documentation</p>
+        <p class="hover:underline pb-5">Microsoft Learn</p>
+        <p class="hover:underline pb-5">Microsoft Tech Community</p>
+        <p class="hover:underline pb-5">Azure Marketplace</p>
+        <p class="hover:underline pb-5">AppSource</p>
+        <p class="hover:underline pb-5">Visual Studio</p>
+      </div>
+      <div class="flex flex-col cursor-pointer">
+        <p class="font-semibold pb-5">Other</p>
+        <p class="hover:underline pb-5">Free downloads & security</p>
+        <p class="hover:underline pb-5">Education</p>
+        <p class="hover:underline pb-5">Gift Cards</p>
+        <p class="hover:underline pb-5">Licensing</p>
+      </div>
+    </div>
 
-  <div class="slider flex flex-col cursor-pointer p-1 xl:p-0">
+    <div class="last bg-gray-200 flex justify-center items-center p-2 m-0 border-b-2 border-black">
+      <p class="flex hover:underline">VIEW SITEMAP
+        <svg class="inline ml-1 mt-0.5" fill="#000000" height="12px" width="12px" version="1.1"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
+          xml:space="preserve">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path id="XMLID_222_"
+              d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z">
+            </path>
+          </g>
+        </svg>
+    </div>
+    </p>
+  </div>
+  </div>
+  </div>
+  <div id="navItems" class="w-full bg-gray-100 flex-col text-sm ml-0 hidden">
+    <div class="nav-items p-4  border border-dashed border-black">Microsoft 365</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Teams</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Copilot</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Windows</div>
+    <div class="nav-items p-4 border-b-[1.5px]">More</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Surface</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Xbox</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Support</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Software</div>
+    <div class="nav-subitems hidden  p-4 border-b-[1.5px]">Windows Apps</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">AI</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">OneDrive</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Outlook</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Skype</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">OneNote</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Microsoft Teams</div>
+    <div class="nav-items p-4 border-b-[1.5px]">PCs & Devices</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Shop Xbox</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Accessories</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Entertainment</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Xbox Game Pass Ultimate</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Xbox Live Gold</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Xbox games</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">PC games</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Windows digital games</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Business</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Microsoft Cloud</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Microsoft Security</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Azure</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Dynamics 365</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Microsoft 365 for business</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Microsoft Power Platform</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Windows 365</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Developer & IT</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Developer Center</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Documentation</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Microsoft Learn</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Microsoft Tech Community</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Azure Marketplace</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">AppSource</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Visual Studio</div>
+    <div class="nav-items p-4 border-b-[1.5px]">Other</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Free downloads & security</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Education</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Gift Cards</div>
+    <div class="nav-subitems hidden p-4 border-b-[1.5px]">Licensing</div>
+    <div class="nav-items p-4 border-b-[1.5px]">View Sitemap</div>
+  </div>
+  </div>
+  <div id="slider" class="flex flex-col cursor-pointer p-1 xl:p-0">
     <div class="up">
       <img src="s2.avif" alt="Tune into the Xbox Games Showcase today" />
     </div>
-    <div class="down xl:text-white xl:w-[32rem] bg-white xl:bg-transparent border-b-2 p-6 xl:p-24 xl:mt-[-500px] xl:border-0">
-      <h1 class="font-semibold text-2xl pb-4 ">
+    <div
+      class="down xl:text-white xl:w-[32rem] bg-white xl:bg-transparent border-b-2 p-6 xl:p-24 xl:mt-[-500px] xl:border-0">
+      <h1 class="font-semibold text-2xl pb-4">
         Tune into the Xbox Games Showcase today
       </h1>
       <p class="pb-4">
-        Join us for a double feature on 9 June, 10:30 PM IST—Xbox Games Showcase immediately followed by Call of Duty®: Black Ops 6 Direct.
+        Join us for a double feature on 9 June, 10:30 PM IST—Xbox Games
+        Showcase immediately followed by Call of Duty®: Black Ops 6 Direct.
       </p>
-      <button class="btn">
-        Stream live
-      </button>
+      <button class="btn">Stream live</button>
     </div>
   </div>
   <div class="controls flex justify-center items-center my-10 gap-2">
     <div class="pause cursor-pointer">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="24px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier">
           <g>
-            <path fill="#ffffff" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M53.92,10.081 c12.107,12.105,12.107,31.732,0,43.838c-12.106,12.108-31.734,12.108-43.839,0c-12.107-12.105-12.107-31.732,0-43.838 C22.186-2.027,41.813-2.027,53.92,10.081z"></path>
-            <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="25" y1="23" x2="25" y2="41"></line>
-            <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="38" y1="23" x2="38" y2="41"></line>
-            
+            <path fill="#ffffff" stroke="#000000" stroke-width="2" stroke-miterlimit="10"
+              d="M53.92,10.081 c12.107,12.105,12.107,31.732,0,43.838c-12.106,12.108-31.734,12.108-43.839,0c-12.107-12.105-12.107-31.732,0-43.838 C22.186-2.027,41.813-2.027,53.92,10.081z">
+            </path>
+            <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="25" y1="23" x2="25" y2="41">
+            </line>
+            <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="38" y1="23" x2="38" y2="41">
+            </line>
           </g>
         </g>
       </svg>
     </div>
     <div class="arrow-l cursor-pointer">
-      <svg fill="#000000" height="16px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" class="rotate-180">
+      <svg fill="#000000" height="16px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" class="rotate-180">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier">
-          <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"></path>
+          <path id="XMLID_222_"
+            d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z">
+          </path>
         </g>
       </svg>
     </div>
     <div class="circles flex space-x-8">
-      <svg width="14px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-      <svg width="14px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+      <svg width="14px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+      </svg>
+      <svg width="14px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+      </svg>
     </div>
     <div class="arrow-r">
-      <svg fill="#000000" height="16px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"></path> </g></svg>
+      <svg fill="#000000" height="16px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path id="XMLID_222_"
+            d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z">
+          </path>
+        </g>
+      </svg>
     </div>
   </div>
   <div class="items flex flex-wrap gap-10 justify-center items-center font-medium text-[#0067b8] p-5">
@@ -185,129 +330,178 @@
       <p class="">Explore Surface devices</p>
     </div>
   </div>
-  <div class="products px-14 py-20">
-    <div class="flex flex-wrap space-x-6  ">
-      <div class="flex flex-col bg-white shadow-gray-300 shadow-md w-56">
+  <div class="products px-4 xl:px-14 py-32">
+    <div class="flex gap-6 flex-wrap">
+      <!-- Product 1 -->
+      <div
+        class="flex flex-col bg-white shadow-gray-300 shadow-md w-full sm:w-[calc(50%-1.5rem)] xl:w-[calc(25%-1.5rem)]">
         <div class="products-img">
-          <img src="p1.avif" alt="Surface Laptop, Copilot+ PC">
+          <img class="w-full h-auto" src="p1.avif" alt="Surface Laptop, Copilot+ PC" />
         </div>
-        <div class="products-content p-6">
-          <h3 class="font-semibold text-2xl pb-4">Surface Laptop, Copilot+ PC</h3>
-          <p class="pb-4 h-48">Unlock next-gen AI experiences like Recall—so you can search your PC’s past to find the
-            content you need</p>
-          <button class="btn">
-            Learn More
-          </button>
+        <div class="products-content p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-2xl pb-4">
+              Surface Laptop, Copilot+ PC
+            </h3>
+            <p class="pb-4 h-48">
+              Unlock next-gen AI experiences like Recall—so you can search
+              your PC’s past to find the content you need
+            </p>
+          </div>
+          <button class="btn self-start mt-auto">Learn More</button>
         </div>
       </div>
-      <div class="flex flex-col bg-white shadow-gray-300 shadow-md  w-56">
+      <!-- Product 2 -->
+      <div
+        class="flex flex-col bg-white shadow-gray-300 shadow-md w-full sm:w-[calc(50%-1.5rem)] xl:w-[calc(25%-1.5rem)]">
         <div class="products-img">
-          <img src="p2.avif" alt="Maximise the everyday with Microsoft 365">
+          <img class="w-full h-auto" src="p2.avif" alt="Maximise the everyday with Microsoft 365" />
         </div>
-        <div class="products-content p-6">
-          <h3 class="font-semibold text-2xl pb-4">Maximise the everyday with Microsoft 365</h3>
-          <p class="pb-4">Get online protection, secure cloud storage and innovative apps designed to fit your needs –
-            all in one plan.</p>
-          <button class="btn">
-            For one person
-          </button>
-          <p class="text-[#0067b8] hover:underline font-semibold pt-2">For up to six people ></p>
+        <div class="products-content p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-2xl pb-4">
+              Maximise the everyday with Microsoft 365
+            </h3>
+            <p class="pb-4 h-48">
+              Get online protection, secure cloud storage and innovative apps
+              designed to fit your needs – all in one plan.
+            </p>
+          </div>
+          <div class="mt-auto">
+            <button class="btn self-start">For one person</button>
+            <p class="text-[#0067b8] hover:underline font-semibold pt-2">
+              For up to six people >
+            </p>
+          </div>
         </div>
       </div>
-      <div class="flex flex-col bg-white shadow-gray-300 shadow-md  w-56">
+      <!-- Product 3 -->
+      <div
+        class="flex flex-col bg-white shadow-gray-300 shadow-md w-full sm:w-[calc(50%-1.5rem)] xl:w-[calc(25%-1.5rem)]">
         <div class="products-img">
-          <img src="p3.avif" alt="Xbox Game Pass Ultimate">
+          <img class="w-full h-auto" src="p3.avif" alt="Xbox Game Pass Ultimate" />
         </div>
-        <div class="products-content p-6">
-          <h3 class="font-semibold text-2xl pb-4">Xbox Game Pass Ultimate</h3>
-          <p class="pb-4  h-48">Play new games on day one. Plus, enjoy hundreds of high-quality games with friends on console
-            and PC.</p>
-          <button class="btn">
-            Join Now
-          </button>
+        <div class="products-content p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-2xl pb-4">
+              Xbox Game Pass Ultimate
+            </h3>
+            <p class="pb-4 h-48">
+              Play new games on day one. Plus, enjoy hundreds of high-quality
+              games with friends on console and PC.
+            </p>
+          </div>
+          <button class="btn self-start mt-auto">Join Now</button>
         </div>
       </div>
-      <div class="flex flex-col bg-white shadow-gray-300 shadow-md  w-56">
+      <!-- Product 4 -->
+      <div
+        class="flex flex-col bg-white shadow-gray-300 shadow-md w-full sm:w-[calc(50%-1.5rem)] xl:w-[calc(25%-1.5rem)]">
         <div class="products-img">
-          <img src="p4.webp" alt="Xbox Series X">
+          <img class="w-full h-auto" src="p4.webp" alt="Xbox Series X" />
         </div>
-        <div class="products-content p-6">
-          <h3 class="font-semibold text-2xl pb-4">Xbox Series X</h3>
-          <p class="pb-4  h-56">The fastest, most powerful Xbox ever.</p>
-          <button class="btn">
-            Shop Xbox Series X
-          </button>
+        <div class="products-content p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-2xl pb-4">Xbox Series X</h3>
+            <p class="pb-4 h-56">The fastest, most powerful Xbox ever.</p>
+          </div>
+          <button class="btn self-start mt-auto">Shop Xbox Series X</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="Xbox flex flex-col cursor-pointer  xl:p-0">
+
+  <div class="Xbox flex flex-col cursor-pointer xl:p-0">
     <div class="up xl:px-8">
-    <img src="xbox.avif" alt="xbox" />
-  </div>
+      <img src="xbox.avif" alt="xbox" />
+    </div>
     <div class="down xl:w-[32rem] bg-white xl:bg-transparent border-b-2 p-6 xl:p-24 xl:mt-[-500px] xl:border-0">
       <h1 class="font-semibold text-2xl pb-4">Xbox Series S</h1>
-      <p class="pb-4 ">Next-gen performance in the smallest Xbox ever</p>
-      <button class="btn">
-        Shop Xbox Series S
-      </button>
+      <p class="pb-4">Next-gen performance in the smallest Xbox ever</p>
+      <button class="btn">Shop Xbox Series S</button>
     </div>
   </div>
-  <div class="business px-4 xl:px-14 py-32 ">
+  <div class="business px-4 xl:px-14 py-32">
     <h3 class="font-semibold text-2xl pb-4">For business</h3>
-    <div class="flex gap-6 flex-wrap space-y-4">
-      <div class="flex flex-col flex-wrap bg-white shadow-gray-300 shadow-md  w-fit ">
+    <div class="flex gap-6 flex-wrap">
+      <!-- Business 1 -->
+      <div
+        class="flex flex-col bg-white shadow-gray-300 shadow-md w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)]">
         <div class="business-img">
-          <img src="b1.avif" alt="Surface for Business">
+          <img class="w-full h-auto" src="b1.avif" alt="Surface for Business" />
         </div>
-        <div class="business-content p-6">
-          <h3 class="font-semibold  text-2xl pb-4">Surface for Business</h3>
-          <p class="pb-4 h-48">No matter what you do, there’s a Surface to help you do it.</p>
-          <button class="btn">
-            Shop Now
-          </button>
+        <div class="business-content p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-2xl pb-4">Surface for Business</h3>
+            <p class="pb-4 h-48">
+              No matter what you do, there’s a Surface to help you do it.
+            </p>
+          </div>
+          <button class="btn self-start mt-auto">Shop Now</button>
         </div>
       </div>
-      <div class="flex flex-col bg-white shadow-gray-300 shadow-md  w-fit ">
+      <!-- Business 2 -->
+      <div
+        class="flex flex-col bg-white shadow-gray-300 shadow-md w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)]">
         <div class="business-img">
-          <img src="b2.webp" alt="Get Microsoft Teams for free">
+          <img class="w-full h-auto" src="b2.webp" alt="Get Microsoft Teams for free" />
         </div>
-        <div class="business-content p-6">
-          <h3 class="font-semibold text-2xl pb-4">Get Microsoft Teams for free</h3>
-          <p class="pb-4  h-48">Online meetings, chat and shared cloud storage – all in one place.</p>
-          <button class="btn">
-            Sign up for free
-          </button>
+        <div class="business-content p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-2xl pb-4">
+              Get Microsoft Teams for free
+            </h3>
+            <p class="pb-4 h-48">
+              Online meetings, chat and shared cloud storage – all in one
+              place.
+            </p>
+          </div>
+          <button class="btn self-start mt-auto">Sign up for free</button>
         </div>
       </div>
-      <div class="flex flex-col bg-white shadow-gray-300 shadow-md  w-fit ">
+      <!-- Business 3 -->
+      <div
+        class="flex flex-col bg-white shadow-gray-300 shadow-md w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)]">
         <div class="business-img">
-          <img src="b3.avif" alt="Get Microsoft Teams for your business">
+          <img class="w-full h-auto" src="b3.avif" alt="Get Microsoft Teams for your business" />
         </div>
-        <div class="business-content p-6">
-          <h3 class="font-semibold text-2xl pb-4">Get Microsoft Teams for your business</h3>
-          <p class="pb-4">Online meetings, chat, real-time collaboration, and shared cloud storage – all in one place.
-          </p>
-          <button class="btn">
+        <div class="business-content p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-2xl pb-4">
+              Get Microsoft Teams for your business
+            </h3>
+            <p class="pb-4 h-48">
+              Online meetings, chat, real-time collaboration, and shared cloud
+              storage – all in one place.
+            </p>
+          </div>
+          <button class="btn self-start mt-auto">
             Find the right plan for your business
           </button>
         </div>
       </div>
-      <div class="flex flex-col bg-white shadow-gray-300 shadow-md  w-fit">
+      <!-- Business 4 -->
+      <div
+        class="flex flex-col bg-white shadow-gray-300 shadow-md w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)]">
         <div class="business-img">
-          <img src="b4.avif" alt="Copilot for Microsoft 365">
+          <img class="w-full h-auto" src="b4.avif" alt="Copilot for Microsoft 365" />
         </div>
-        <div class="business-content p-6">
-          <h3 class="font-semibold text-2xl pb-4">Copilot for Microsoft 365</h3>
-          <p class="pb-4  h-48">Save time and focus on the things that matter most with AI in Microsoft 365 for business.</p>
-          <button class="btn">
-            Shop Now
-          </button>
+        <div class="business-content p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-2xl pb-4">
+              Copilot for Microsoft 365
+            </h3>
+            <p class="pb-4 h-48">
+              Save time and focus on the things that matter most with AI in
+              Microsoft 365 for business.
+            </p>
+          </div>
+          <button class="btn self-start mt-auto">Shop Now</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="flex px-4 xl:px-14  py-4 space-x-4 items-center">
+  <div class="flex px-4 xl:px-14 py-4 space-x-4 items-center">
     <p>Follow Microsoft</p>
     <button class="w-7 focus:outline-dotted focus:outline-[3px] focus:outline-blue-600 cursor-pointer">
       <img src="facebook.avif" alt="facebook" />
@@ -321,12 +515,15 @@
   </div>
   <div class="px-4 pb-14 text-right">
     <button
-      class="font-semibold px-4 py-2 rounded-sm focus:outline-dotted focus:outline-2 focus:outline-black focus:outline-offset-[-4px] bg-[#d7d7d7] hover:bg-white hover:shadow-gray-300 hover:shadow-sm"><a href="#nav">
-      <svg class="w-4 inline" data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-        <path d="M256,34,432,210l-21.2,21.21L271,91.4V478H241V91.4L101.16,231.25,80,210Z" />
-      </svg>
-      Back to top
-    </a></button>
+      class="font-semibold px-4 py-2 rounded-sm focus:outline-dotted focus:outline-2 focus:outline-black focus:outline-offset-[-4px] bg-[#d7d7d7] hover:bg-white hover:shadow-gray-300 hover:shadow-sm">
+      <a href="#nav">
+        <svg class="w-4 inline" data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M256,34,432,210l-21.2,21.21L271,91.4V478H241V91.4L101.16,231.25,80,210Z" />
+        </svg>
+        Back to top
+      </a>
+    </button>
   </div>
 
   <footer class="bg-gray-100 text-gray-500 text-xxs">
@@ -341,7 +538,7 @@
         <p class="hover:underline pb-[0.85rem]">Microsoft 365</p>
         <p class="hover:underline pb-[0.85rem]">Windows 11 apps</p>
       </div>
-      <div class="flex flex-col cursor-pointer  w-36">
+      <div class="flex flex-col cursor-pointer w-36">
         <p class="font-semibold text-sm pb-2">Microsoft Store</p>
         <p class="hover:underline pb-[0.85rem]">Account profile</p>
         <p class="hover:underline pb-[0.85rem]">Download Center</p>
@@ -349,18 +546,24 @@
         <p class="hover:underline pb-[0.85rem]">Returns</p>
         <p class="hover:underline pb-[0.85rem]">Order tracking</p>
       </div>
-      <div class="flex flex-col cursor-pointer  w-36">
+      <div class="flex flex-col cursor-pointer w-36">
         <p class="font-semibold text-sm pb-2">Education</p>
         <p class="hover:underline pb-[0.85rem]">Microsoft in education</p>
         <p class="hover:underline pb-[0.85rem]">Devices for education</p>
-        <p class="hover:underline pb-[0.85rem]">Microsoft Teams for Education</p>
+        <p class="hover:underline pb-[0.85rem]">
+          Microsoft Teams for Education
+        </p>
         <p class="hover:underline pb-[0.85rem]">Microsoft 365 Education</p>
         <p class="hover:underline pb-[0.85rem]">Office Education</p>
-        <p class="hover:underline pb-[0.85rem]">Educator training and development</p>
-        <p class="hover:underline pb-[0.85rem]">Deals for students and parents</p>
+        <p class="hover:underline pb-[0.85rem]">
+          Educator training and development
+        </p>
+        <p class="hover:underline pb-[0.85rem]">
+          Deals for students and parents
+        </p>
         <p class="hover:underline pb-[0.85rem]">Azure for students</p>
       </div>
-      <div class="flex flex-col cursor-pointer   w-36">
+      <div class="flex flex-col cursor-pointer w-36">
         <p class="font-semibold text-sm pb-[0.85rem]">Business</p>
         <p class="hover:underline pb-[0.85rem]">Microsoft Cloud</p>
         <p class="hover:underline pb-[0.85rem]">Microsoft Security</p>
@@ -371,7 +574,7 @@
         <p class="hover:underline pb-[0.85rem]">Copilot for Microsoft 365</p>
         <p class="hover:underline pb-[0.85rem]">Microsoft Teams</p>
       </div>
-      <div class="flex flex-col cursor-pointer  w-36">
+      <div class="flex flex-col cursor-pointer w-36">
         <p class="font-semibold text-sm pb-[0.85rem]">Developer & IT</p>
         <p class="hover:underline pb-[0.85rem]">Developer Center</p>
         <p class="hover:underline pb-[0.85rem]">Documentation</p>
@@ -382,7 +585,7 @@
         <p class="hover:underline pb-[0.85rem]">Microsoft Power Platform</p>
         <p class="hover:underline pb-[0.85rem]">Visual Studio</p>
       </div>
-      <div class="flex flex-col cursor-pointer  w-36">
+      <div class="flex flex-col cursor-pointer w-36">
         <p class="font-semibold text-sm pb-2">Company</p>
         <p class="hover:underline pb-[0.85rem]">Careers</p>
         <p class="hover:underline pb-[0.85rem]">About Microsoft</p>
@@ -393,9 +596,9 @@
         <p class="hover:underline pb-[0.85rem]">Sustainability</p>
       </div>
     </div>
-    <div class="last flex flex-wrap xl:flex-nowrap  xl:px-14 xl:align-left pb-4 py-4">
+    <div class="last flex flex-wrap xl:flex-nowrap xl:px-14 xl:align-left pb-4 py-4">
       <div class="flex flex-col space-y-4 xl:space-x-4 xl:space-y-0 xl:flex-row xl:mr-24">
-        <div class="flex space-x-2  px-4 xl:px-0">
+        <div class="flex space-x-2 px-4 xl:px-0">
           <svg height="21px" width="22px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#a3a3a3"
             stroke="#a3a3a3" stroke-width="0.00512">
@@ -416,7 +619,7 @@
           </svg>
           <p class="cursor-pointer hover:underline">English (India)</p>
         </div>
-        <div class="flex px-4  xl:px-0 space-x-2">
+        <div class="flex px-4 xl:px-0 space-x-2">
           <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="18"
             width="33">
             <title>Your Privacy Choices Opt-Out Icon</title>
@@ -432,20 +635,25 @@
               d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
               style="fill: #06f"></path>
           </svg>
-          <p class="cursor-pointer hover:underline ">Your Privacy Choices</p>
+          <p class="cursor-pointer hover:underline">Your Privacy Choices</p>
         </div>
-        <div class="hover:underline pb-2  px-4  xl:px-0 ">Consumer Health Privacy</div>
+        <div class="hover:underline pb-2 px-4 xl:px-0">
+          Consumer Health Privacy
+        </div>
       </div>
-      <div class="flex flex-wrap xl:flex-nowrap xl:space-x-4  ">
-        <div class="hover:underline px-4 xl:px-0 xl:pb-2">Contact Microsoft</div>
-        <div class="hover:underline px-4  xl:px-0  xl:pb-2">Privacy</div>
-        <div class="hover:underline px-4 xl:px-0  xl:pb-2">Terms of use</div>
-        <div class="hover:underline px-4 xl:px-0  xl:pb-2">Trademarks</div>
-        <div class="hover:underline px-4 xl:px-0  xl:pb-2">About our ads</div>
-        <div class="px-4 xl:px-0  xl:pb-2">© Microsoft 2024</div>
+      <div class="flex flex-wrap xl:flex-nowrap xl:space-x-4">
+        <div class="hover:underline px-4 xl:px-0 xl:pb-2">
+          Contact Microsoft
+        </div>
+        <div class="hover:underline px-4 xl:px-0 xl:pb-2">Privacy</div>
+        <div class="hover:underline px-4 xl:px-0 xl:pb-2">Terms of use</div>
+        <div class="hover:underline px-4 xl:px-0 xl:pb-2">Trademarks</div>
+        <div class="hover:underline px-4 xl:px-0 xl:pb-2">About our ads</div>
+        <div class="px-4 xl:px-0 xl:pb-2">© Microsoft 2024</div>
       </div>
     </div>
   </footer>
   <script type="module" src="/main.js"></script>
 </body>
+
 </html>
