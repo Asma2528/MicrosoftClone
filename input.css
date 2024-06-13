@@ -43,6 +43,9 @@
     @apply translate-x-2; /* Move left on hover */
   }
 
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
 }
 
 
